@@ -1,14 +1,14 @@
 import TopAppBar, { TopAppBarFixedAdjust, TopAppBarIcon, TopAppBarRow, TopAppBarSection } from '@material/react-top-app-bar';
 import MaterialIcon from "@material/react-material-icon";
 
-const MyComponent = () => {
+const MyAppHeader = () => {
     return (
       <div>
         <TopAppBar>
           <TopAppBarRow>
             <TopAppBarSection align='start'>
               <TopAppBarIcon navIcon tabIndex={0}>
-                <MaterialIcon hasRipple icon='menu' onClick={() => console.log('click')}/>
+                <MaterialIcon hasRipple icon='home' onClick={() => console.log('click')}/>
               </TopAppBarIcon>
             </TopAppBarSection>
             <TopAppBarSection align='end' role='toolbar'>
@@ -16,7 +16,7 @@ const MyComponent = () => {
                 <MaterialIcon 
                   aria-label="print page" 
                   hasRipple 
-                  icon='print' 
+                  icon='menu' 
                   onClick={() => console.log('print')}
                 />
               </TopAppBarIcon>
@@ -30,4 +30,4 @@ const MyComponent = () => {
     );
   }
 
-export default MyComponent;
+export default MyAppHeader;
