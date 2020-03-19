@@ -1,0 +1,8 @@
+/* Header */
+.mdc-top-app-bar {
+    background-color: black;
+}
+
+.mdc-top-app-bar .mdc-custom-icon {
+    color: white;
+}
