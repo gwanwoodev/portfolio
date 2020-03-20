@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Tags from "./tags";
 
 class Contents extends Component {
     state = {}
@@ -8,13 +9,8 @@ class Contents extends Component {
 
     render() {
         return(
-            <div className="contents-tags">
-                <p className="tag">All</p>
-                <p className="tag">Publishing</p>
-                <p className="tag">Javascript</p>
-                <p className="tag">React.js</p>
-                <p className="tag">Node.js</p>
-            </div>
+            <Tags />
+            
         )
     }
 }
