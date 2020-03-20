@@ -1,0 +1,18 @@
+/* header-section */
+.header-section {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+.header-section .header-title {
+    font-family:  "NanumGothic-Regular";
+    color: white;
+    font-size: 2rem;
+}
+
+.header-section .bold {
+    font-family: "NanumGothic-ExtraBold";
+}

@@ -14,14 +14,6 @@ app.prepare().then(() => {
   server.use(bodyParser.json());
   server.use(bodyParser.urlencoded({extended: false}));
   server.use('/api', api);
-  
-  server.get('/a', (req, res) => {
-    return app.render(req, res, '/a', req.query);
-  });
-
-  server.get('/b', (req, res) => {
-    return app.render(req, res, '/a', req.query)
-  });
 
   server.all("*", (req, res) => {
     return handle(req, res);
