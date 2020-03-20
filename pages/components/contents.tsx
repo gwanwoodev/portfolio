@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Tags from "./tags";
+import Cards from "./cards";
 
 class Contents extends Component {
     state = {}
@@ -9,8 +9,9 @@ class Contents extends Component {
 
     render() {
         return(
-            <Tags />
-            
+            <div className="wrapper-contents">
+                <Cards />
+            </div>
         )
     }
 }

@@ -32,7 +32,7 @@ body {
 }
 
 /* Contents - tags */
-.wrapper .contents-tags {
+.wrapper .wrapper-header .tags {
     position: absolute;
     display: flex;
     left: 50%;
@@ -40,7 +40,7 @@ body {
     transform: translate(-50%, 0);
 }
 
-.wrapper .contents-tags .tag {
+.wrapper .wrapper-header .tags .tag {
    margin-right: 10px;
    color: white;
    border: 1px solid whitesmoke;

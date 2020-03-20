@@ -1,6 +1,7 @@
 import TopAppBar, { TopAppBarIcon, TopAppBarRow, TopAppBarSection } from '@material/react-top-app-bar';
 import MaterialIcon from "@material/react-material-icon";
 import Section from "./section";
+import Tags from "./tags";
 
 const MyAppHeader = (props:any ) => {
     return (
@@ -26,6 +27,7 @@ const MyAppHeader = (props:any ) => {
           </TopAppBarRow>
         </TopAppBar>
         <Section />
+        <Tags />
       </div>
     );
   }
