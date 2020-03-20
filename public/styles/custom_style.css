@@ -16,3 +16,8 @@
 .header-section .bold {
     font-family: "NanumGothic-ExtraBold";
 }
+
+.header-section .header-text {
+    margin-top: 12px;
+    font-size: 1rem;
+}
