@@ -1,4 +1,4 @@
-import React, {Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Header from "./components/header";
 
 class Portfolio extends Component {
@@ -8,7 +8,9 @@ class Portfolio extends Component {
 
   render() {
     return(
-      <Header iconClassName='mdc-custom-icon'/>
+      <Fragment>
+        <Header iconClassName='mdc-custom-icon' />
+      </Fragment>
     )
   }
 }

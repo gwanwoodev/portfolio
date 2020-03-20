@@ -1,8 +1,23 @@
 /* Header */
 .mdc-top-app-bar {
-    background-color: black;
+    padding-bottom: 35%;
+    background-image: url("https://gwanwoodev.github.io/assets/img/posts/march-logo.jpg");
+    background-size: cover;
+    position: static;
+    background-color: transparent;
 }
 
 .mdc-top-app-bar .mdc-custom-icon {
     color: white;
+}
+
+.wrapper-header {
+    position: relative;
+}
+
+.header-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
 }

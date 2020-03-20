@@ -1,9 +1,10 @@
-import TopAppBar, { TopAppBarFixedAdjust, TopAppBarIcon, TopAppBarRow, TopAppBarSection } from '@material/react-top-app-bar';
+import TopAppBar, { TopAppBarIcon, TopAppBarRow, TopAppBarSection } from '@material/react-top-app-bar';
 import MaterialIcon from "@material/react-material-icon";
+import Section from "./section";
 
 const MyAppHeader = (props:any ) => {
     return (
-      <div>
+      <div className="wrapper-header">
         <TopAppBar>
           <TopAppBarRow>
             <TopAppBarSection align='start'>
@@ -24,9 +25,7 @@ const MyAppHeader = (props:any ) => {
             </TopAppBarSection>
           </TopAppBarRow>
         </TopAppBar>
-        <TopAppBarFixedAdjust>
-          My exciting content!
-        </TopAppBarFixedAdjust>
+        <Section />
       </div>
     );
   }
