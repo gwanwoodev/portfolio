@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import Header from "./components/header";
+import Contents from "./components/contents";
 
 class Portfolio extends Component {
   constructor(props: any) {
@@ -8,9 +9,10 @@ class Portfolio extends Component {
 
   render() {
     return(
-      <Fragment>
+      <div className="wrapper">
         <Header iconClassName='mdc-custom-icon' />
-      </Fragment>
+        <Contents />
+      </div>
     )
   }
 }
