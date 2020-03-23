@@ -3,27 +3,26 @@ import Card, {
     CardPrimaryContent,
     CardMedia,
     CardActions,
-    CardActionButtons,
-    CardActionIcons
+    CardActionButtons
   } from "@material/react-card";
+import Button from "@material/react-button";
 
 const MyAppCard = (_props: any) => {
     return (
         <Card>
             <CardPrimaryContent>
-                <h1>Header</h1>
-                <CardMedia square imageUrl="https://gwanwoodev.github.io/assets/img/posts/momentum_base_placehold.jpg" />
+                <CardMedia square imageUrl="https://gwanwoodev.github.io/assets/img/posts/momentum_base.jpg" />
             </CardPrimaryContent>
 
-            <CardActions>
-                <CardActionButtons>
-                    <button>Click Me</button>
-                </CardActionButtons>
+            <CardActions className="card-preview">
+                <p>Preview Text</p>
             </CardActions>
 
-            <CardActionIcons>
-                <i>Click Me Too!</i>
-            </CardActionIcons>
+            <CardActions className="card-footer">
+                <CardActionButtons>
+                    <Button outlined raised className="card-btn">Demo</Button>
+                </CardActionButtons>
+            </CardActions>
         </Card>
     );
 }

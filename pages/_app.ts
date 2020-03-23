@@ -2,6 +2,7 @@ import "../public/styles/reset.css";
 import "@material/react-top-app-bar/dist/top-app-bar.css";
 import '@material/react-card/dist/card.css';
 import '@material/react-layout-grid/dist/layout-grid.css';
+import '@material/react-button/dist/button.css';
 import "@material/react-material-icon/dist/material-icon.css";
 import "../public/styles/material_icons.css";
 import "../public/styles/custom_mdc.css";
