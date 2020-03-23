@@ -1,6 +1,7 @@
 import express from "express"
 import next from 'next'
 import * as bodyParser from "body-parser";
+import mongoose from "mongoose";
 import api from "./api";
 
 const port = parseInt(process.env.PORT || '3000', 10)
@@ -28,4 +29,13 @@ app.prepare().then(() => {
     )
   });
 
+  mongoose.Promise = global.Promise;
+
+  const db = mongoose.connection;
+  db.on('error', console.error);
+  db.once("open", () => {
+    console.log('mongodb://localhost/portfolio');
+  });
+
+  mongoose.connect("mongodb://localhost/portfolio",{useNewUrlParser:true, useUnifiedTopology:true});
 })
