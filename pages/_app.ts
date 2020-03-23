@@ -8,6 +8,7 @@ import "../public/styles/material_icons.css";
 import "../public/styles/custom_mdc.css";
 import "../public/styles/fonts.css";
 import "../public/styles/custom_style.css";
+import "../public/styles/custom_responsive.css";
 
 import MyApp from "./index";
 
