@@ -10,3 +10,6 @@ yarn.lock
 
 # production server output
 dist
+
+# Upload Folder
+uploads/

@@ -15,11 +15,12 @@ app.prepare().then(() => {
   server.use(bodyParser.json());
   server.use(bodyParser.urlencoded({extended: false}));
   server.use('/api', api);
+  server.use(express.static("uploads"));
 
   server.all("*", (req, res) => {
     return handle(req, res);
   });
-  
+
   server.listen(port, err => {
     if(err) throw err;
     console.log(
