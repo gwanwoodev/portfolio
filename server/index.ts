@@ -38,4 +38,5 @@ app.prepare().then(() => {
   });
 
   mongoose.connect("mongodb://localhost/portfolio",{useNewUrlParser:true, useUnifiedTopology:true});
+
 })
