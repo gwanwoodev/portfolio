@@ -3,7 +3,7 @@ import Tag from "./tag";
 const MyAppTags = (_props:any ) => {
     return(
         <div className="tags">
-            <Tag tagText="HTML, CSS" />
+            <Tag tagText="HTML,CSS" />
             <Tag tagText="ES6+" />
             <Tag tagText="Typescript" />
             <Tag tagText="React.js" />
