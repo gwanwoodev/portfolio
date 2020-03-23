@@ -1,29 +1,24 @@
 import * as express from "express";
-import Book from "../models/books";
-
+import Content from "../models/content";
 const router = express.Router();
 
-router.get("/books", (_req, res) => {
-    Book.find((err, books) => {
-        if(err) {
-            res.status(500).send({error: 'database failure'});
-        }
-        res.json(books);
+/* APIs */
+
+router.get("/content", (_req, res) => {
+    Content.find((err, contents) => {
+        err ? res.status(500).json({msg: 'error'})
+            : res.status(200).json(contents)
     });
 });
 
-router.post("/books", (_req, res) => {
-    const book = new Book({
-        title: 'testing title',
-        author: 'gwanwoodev'
-    });
+router.post("/content", (req, res) => {
+    const {title, preview, thumbnail} = req.body;
 
-    book.save(err => {
-        if(err) {
-            res.json({result: 0});
-        }
-        res.json({result: 1});
-    })
+    const newContent = new Content({title, preview, thumbnail});
+    newContent.save(err => {
+        err ? res.status(500).json({msg: 'error'})
+            : res.status(200).json({msg: 'success'})
+    });
 });
 
 export default router;
