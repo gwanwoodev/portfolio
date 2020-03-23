@@ -3,3 +3,9 @@
         display: none;
     }
 }
+
+@media screen and (min-width: 1160px) {
+    .mdc-layout-grid__cell {
+        grid-column-end: span 3;
+    }
+}

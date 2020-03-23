@@ -15,7 +15,35 @@ const MyAppCards = (_props:any) => {
 
                     <Cell columns={4}>
                         <Card />
-                    </Cell>                                                        
+                    </Cell>
+
+                    <Cell columns={4}>
+                        <Card />
+                    </Cell>                                                                              
+
+                    <Cell columns={4}>
+                        <Card />
+                    </Cell>     
+
+                    <Cell columns={4}>
+                        <Card />
+                    </Cell>     
+
+                    <Cell columns={4}>
+                        <Card />
+                    </Cell>     
+
+                    <Cell columns={4}>
+                        <Card />
+                    </Cell>     
+                    
+                    <Cell columns={4}>
+                        <Card />
+                    </Cell>     
+
+                    <Cell columns={4}>
+                        <Card />
+                    </Cell>                                                                                                                             
                 </Row>
             </Grid>
         </div>
