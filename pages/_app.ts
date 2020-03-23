@@ -1,3 +1,5 @@
+import App from "next/app";
+
 import "../public/styles/reset.css";
 import "@material/react-top-app-bar/dist/top-app-bar.css";
 import '@material/react-card/dist/card.css';
@@ -10,6 +12,4 @@ import "../public/styles/fonts.css";
 import "../public/styles/custom_style.css";
 import "../public/styles/custom_responsive.css";
 
-import MyApp from "./index";
-
-export default MyApp;
+export default App;
