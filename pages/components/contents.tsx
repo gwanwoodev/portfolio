@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 import Cards from "./cards";
 
-class Contents extends Component {
+interface Props {
+    data: Array<Object>;
+}
+
+class Contents extends Component<Props> {
     state = {}
-    constructor(props: any) {
+    constructor(props: Props) {
         super(props);
     }
 
     render() {
         return(
             <div className="wrapper-contents">
-                <Cards />
+                <Cards {...this.props.data}/>
             </div>
         )
     }

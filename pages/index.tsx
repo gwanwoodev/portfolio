@@ -4,6 +4,10 @@ import Contents from "./components/contents";
 import fetch from "isomorphic-unfetch";
 
 class Portfolio extends Component {
+  state = {
+    data: []
+  }
+
   constructor(props: any) {
     super(props);
     this.setContentProps();
@@ -11,15 +15,16 @@ class Portfolio extends Component {
 
 
   setContentProps = async () => {
-    const result = await fetch("http://localhost:3000/api/content").then(res => res.json());    
-    console.log(result);
+    const result = await fetch("http://localhost:3000/api/content").then(res => res.json());
+    this.setState({data: result});
   }
   
   render() {
+    const {data} = this.state;
     return(
       <div className="wrapper">
         <Header iconClassName='mdc-custom-icon' />
-        <Contents />
+        <Contents data={data} />
       </div>
     )
   }
