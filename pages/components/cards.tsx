@@ -12,13 +12,21 @@ class MyAppCards extends Component<Props> {
     }
 
     render() {
+        const cards = this.props.data.map((card) => {
+            return(
+                <Cell columns={4} key={card._id}>
+                    <Card title={card.title} preview={card.preview} thumbnail={card.thumbnail}>
+
+                    </Card>
+                </Cell>
+            )
+        })
+
         return(
             <div className="contents-cards">
                 <Grid>
                     <Row>
-                        <Cell columns={4}>
-                            <Card />
-                        </Cell>                                                                                                                       
+                        {cards}                                                                                                                
                     </Row>
                 </Grid>
             </div>
