@@ -15,7 +15,7 @@ class MyAppCards extends Component<Props> {
         const cards = this.props.data.map((card) => {
             return(
                 <Cell columns={4} key={card._id}>
-                    <Card title={card.title} preview={card.preview} thumbnail={card.thumbnail}>
+                    <Card title={card.title} preview={card.preview} thumbnail={card.thumbnail} directLink={card.directLink}>
 
                     </Card>
                 </Cell>

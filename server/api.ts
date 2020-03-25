@@ -14,9 +14,9 @@ router.get("/content", uploader.none(), (_req, res, _next) => {
 });
 
 router.post("/content", uploader.single('thumbnail'), (req, res, _next) => {
-    const {title, preview} = req.body;
+    const {title, preview, directLink} = req.body;
     const thumbnailPath = `${req.file.filename}`;
-    const newContent = new Content({title, preview, thumbnail: thumbnailPath});
+    const newContent = new Content({title, preview, thumbnail: thumbnailPath, directLink});
     newContent.save(err => {
         err ? res.status(500).json({msg: 'error'})
             : res.status(200).json({msg: 'success'})

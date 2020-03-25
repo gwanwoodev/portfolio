@@ -7,20 +7,20 @@ import Card, {
   } from "@material/react-card";
 import Button from "@material/react-button";
 
-const MyAppCard = (_props: any) => {
+const MyAppCard = (props: any) => {
     return (
         <Card>
             <CardPrimaryContent>
-                <CardMedia square imageUrl="https://gwanwoodev.github.io/assets/img/posts/momentum_base.jpg" />
+                <CardMedia square imageUrl={props.thumbnail} />
             </CardPrimaryContent>
 
             <CardActions className="card-preview">
-                <p>Preview Text</p>
+                {props.preview}
             </CardActions>
 
             <CardActions className="card-footer">
                 <CardActionButtons>
-                    <Button outlined raised className="card-btn">Demo</Button>
+                    <Button outlined raised className="card-btn" target='_blank' href={props.directLink}>Demo</Button>
                 </CardActionButtons>
             </CardActions>
         </Card>

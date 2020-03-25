@@ -12,6 +12,7 @@ class PortfolioAdmin extends Component {
                 <form action="/api/content" method="POST" encType="multipart/form-data">
                     <input type="text" name="title" />
                     <input type="text" name="preview" />
+                    <input type="text" name="directLink" />
                     <input type="file" name="thumbnail" />
                     <input type="submit" />
                 </form>
