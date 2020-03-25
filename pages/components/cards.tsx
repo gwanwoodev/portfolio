@@ -2,13 +2,13 @@ import React, {Component} from "react";
 import Card from "./card";
 import {Cell, Grid, Row} from '@material/react-layout-grid';
 
-class MyAppCards extends Component {
-    constructor(props: any) {
-        super(props);
-    }
+interface Props {
+    data: any;
+}
 
-    componentWillUpdate() {
-        console.log(this.props);
+class MyAppCards extends Component<Props> {
+    constructor(props: Props) {
+        super(props);
     }
 
     render() {

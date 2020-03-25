@@ -14,7 +14,7 @@ class Contents extends Component<Props> {
     render() {
         return(
             <div className="wrapper-contents">
-                <Cards {...this.props.data}/>
+                <Cards data={this.props.data}/>
             </div>
         )
     }
