@@ -10,9 +10,11 @@ import Button from "@material/react-button";
 const MyAppCard = (props: any) => {
     return (
         <Card>
-            <CardPrimaryContent>
-                <CardMedia square imageUrl={props.thumbnail} />
-            </CardPrimaryContent>
+            <a href={props.directLink} target="_blank">
+                <CardPrimaryContent>
+                        <CardMedia square imageUrl={props.thumbnail} />
+                </CardPrimaryContent>
+            </a>
 
             <CardActions className="card-preview">
                 {props.preview}
