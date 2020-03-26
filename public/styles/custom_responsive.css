@@ -9,3 +9,27 @@
         grid-column-end: span 3;
     }
 }
+
+@media screen and (max-width: 490px) and (min-width: 1px) {
+    .mdc-layout-grid {
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 16px;
+        padding: var(--mdc-layout-grid-margin-phone, 16px)
+    }
+
+    .mdc-layout-grid__cell-span--4, .mdc-layout-grid__cell--span-4-phone {
+        width: auto;
+        grid-column-end: span 4;
+    }
+
+    .mdc-layout-grid__inner {
+        display: grid;
+        margin: 0;
+        grid-gap: 16px;
+        grid-gap: var(--mdc-layout-grid-gutter-phone, 16px);
+        grid-template-columns: repeat(4, minmax(0, 1fr));    
+        flex-flow: row wrap;
+        align-items: stretch;
+    }
+}
