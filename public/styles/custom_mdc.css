@@ -29,3 +29,17 @@
     background-color: black;
     border-color: black;
 }
+
+/* Drawer */
+
+.drawer-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .drawer-app-content {
+    flex: auto;
+    overflow: auto;
+}
