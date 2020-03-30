@@ -31,3 +31,7 @@
 }
 
 /* Drawer */
+
+.mdc-drawer {
+    position: fixed;
+}

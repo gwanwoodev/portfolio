@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import TopAppBar, { TopAppBarIcon, TopAppBarRow, TopAppBarSection } from '@material/react-top-app-bar';
+import Drawer, {DrawerContent, DrawerHeader, DrawerTitle} from '@material/react-drawer';
+import List, {ListItem, ListItemGraphic, ListItemText} from '@material/react-list';
 import MaterialIcon from "@material/react-material-icon";
 import Section from "./section";
 import Tags from "./tags";
@@ -9,6 +11,10 @@ interface Props {
 }
 
 class MyAppHeader extends Component<Props> {
+  state = {
+    selectedIndex: 0,
+    open: false
+  };
   constructor(props: Props) {
     super(props);
   }
@@ -17,6 +23,27 @@ class MyAppHeader extends Component<Props> {
     return(
       <div className="wrapper-header">
         <TopAppBar>
+
+
+          <Drawer
+            modal
+            open={this.state.open}
+            onClose={()=> this.setState({open: false})}
+          >
+            <DrawerHeader>
+              <DrawerTitle>Drawer Title</DrawerTitle>
+            </DrawerHeader>
+            <DrawerContent>
+              <List singleSelection selectedIndex={this.state.selectedIndex}>
+                <ListItem>
+                  <ListItemGraphic graphic={<MaterialIcon icon="folder" />} />
+                  <ListItemText primaryText="Primary Text" />
+                </ListItem>
+              </List>
+            </DrawerContent>
+          </Drawer>
+
+
           <TopAppBarRow>
             <TopAppBarSection align='start'>
               <TopAppBarIcon navIcon tabIndex={0}>
@@ -30,11 +57,12 @@ class MyAppHeader extends Component<Props> {
                   hasRipple 
                   className={this.props.iconClassName}
                   icon='menu' 
-                  onClick={() => console.log('print')}
+                  onClick={() => this.setState({open: ! this.state.open})}
                 />
               </TopAppBarIcon>
             </TopAppBarSection>
           </TopAppBarRow>
+
         </TopAppBar>
         <Section />
         <Tags />
