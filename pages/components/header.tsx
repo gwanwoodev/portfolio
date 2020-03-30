@@ -20,7 +20,7 @@ class MyAppHeader extends Component<Props> {
           <TopAppBarRow>
             <TopAppBarSection align='start'>
               <TopAppBarIcon navIcon tabIndex={0}>
-                <MaterialIcon className={this.props.iconClassName} hasRipple icon='home' onClick={() => console.log('click')}/>
+                <MaterialIcon className={this.props.iconClassName} hasRipple icon='home' onClick={() => location.href="/"}/>
               </TopAppBarIcon>
             </TopAppBarSection>
             <TopAppBarSection align='end' role='toolbar'>
