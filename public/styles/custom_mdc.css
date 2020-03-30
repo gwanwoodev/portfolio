@@ -35,3 +35,7 @@
 .mdc-drawer {
     position: fixed;
 }
+
+.mdc-list-href {
+    text-decoration: none;
+}

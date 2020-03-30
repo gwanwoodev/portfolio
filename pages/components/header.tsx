@@ -35,20 +35,26 @@ class MyAppHeader extends Component<Props> {
             </DrawerHeader>
             <DrawerContent>
               <List singleSelection selectedIndex={this.state.selectedIndex} handleSelect={(selectedIndex) => this.setState({selectedIndex})}>
-                <ListItem>
-                  <ListItemGraphic graphic={<MaterialIcon icon="link" />} />
-                  <ListItemText primaryText="Blog" />
-                </ListItem>
+                <a target="_blank" href="https://gwanwoodev.github.io" className="mdc-list-href">
+                  <ListItem>
+                    <ListItemGraphic graphic={<MaterialIcon icon="link" />} />
+                    <ListItemText primaryText="Blog" />
+                  </ListItem>
+                </a>
 
-                <ListItem>
-                  <ListItemGraphic graphic={<MaterialIcon icon="link" />} />
-                  <ListItemText primaryText="Github" />
-                </ListItem>
+                <a target="_blank" href="https://github.com/gwanwoodev" className="mdc-list-href">
+                  <ListItem>
+                    <ListItemGraphic graphic={<MaterialIcon icon="link" />} />
+                    <ListItemText primaryText="Github" />
+                  </ListItem>
+                </a>                
 
-                <ListItem>
-                  <ListItemGraphic graphic={<MaterialIcon icon="link" />} />
-                  <ListItemText primaryText="Contact" />
-                </ListItem>                                
+                <a target="_blank" href="https://gwanwoodev.github.io/contact" className="mdc-list-href">
+                  <ListItem>
+                    <ListItemGraphic graphic={<MaterialIcon icon="link" />} />
+                    <ListItemText primaryText="Contact" />
+                  </ListItem>                                
+                </a>
               </List>
             </DrawerContent>
           </Drawer>
