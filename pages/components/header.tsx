@@ -31,14 +31,24 @@ class MyAppHeader extends Component<Props> {
             onClose={()=> this.setState({open: false})}
           >
             <DrawerHeader>
-              <DrawerTitle>Drawer Title</DrawerTitle>
+              <DrawerTitle>Menu</DrawerTitle>
             </DrawerHeader>
             <DrawerContent>
-              <List singleSelection selectedIndex={this.state.selectedIndex}>
+              <List singleSelection selectedIndex={this.state.selectedIndex} handleSelect={(selectedIndex) => this.setState({selectedIndex})}>
                 <ListItem>
-                  <ListItemGraphic graphic={<MaterialIcon icon="folder" />} />
-                  <ListItemText primaryText="Primary Text" />
+                  <ListItemGraphic graphic={<MaterialIcon icon="link" />} />
+                  <ListItemText primaryText="Blog" />
                 </ListItem>
+
+                <ListItem>
+                  <ListItemGraphic graphic={<MaterialIcon icon="link" />} />
+                  <ListItemText primaryText="Github" />
+                </ListItem>
+
+                <ListItem>
+                  <ListItemGraphic graphic={<MaterialIcon icon="link" />} />
+                  <ListItemText primaryText="Contact" />
+                </ListItem>                                
               </List>
             </DrawerContent>
           </Drawer>
