@@ -55,6 +55,10 @@ class MyAppHeader extends Component<Props> {
                     <ListItemText primaryText="Contact" />
                   </ListItem>                                
                 </a>
+                <ListItem>
+                  <ListItemGraphic graphic={<MaterialIcon icon="lock" />} />
+                  <ListItemText primaryText="Login" />
+                </ListItem>
               </List>
             </DrawerContent>
           </Drawer>
