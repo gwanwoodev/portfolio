@@ -1,10 +1,11 @@
 import React, {Component} from "react";
+import Section from "./section";
+import Tags from "./tags";
 import TopAppBar, { TopAppBarIcon, TopAppBarRow, TopAppBarSection } from '@material/react-top-app-bar';
 import Drawer, {DrawerContent, DrawerHeader, DrawerTitle} from '@material/react-drawer';
 import List, {ListItem, ListItemGraphic, ListItemText} from '@material/react-list';
+import Link from "next/link";
 import MaterialIcon from "@material/react-material-icon";
-import Section from "./section";
-import Tags from "./tags";
 
 interface Props {
   iconClassName: string
@@ -23,8 +24,6 @@ class MyAppHeader extends Component<Props> {
     return(
       <div className="wrapper-header">
         <TopAppBar>
-
-
           <Drawer
             modal
             open={this.state.open}
@@ -55,10 +54,15 @@ class MyAppHeader extends Component<Props> {
                     <ListItemText primaryText="Contact" />
                   </ListItem>                                
                 </a>
-                <ListItem>
-                  <ListItemGraphic graphic={<MaterialIcon icon="lock" />} />
-                  <ListItemText primaryText="Login" />
-                </ListItem>
+                <Link href="/login">
+                  <a className="mdc-list-href">
+                    <ListItem>
+                      <ListItemGraphic graphic={<MaterialIcon icon="lock" />} />
+                      <ListItemText primaryText="Login" />
+                    </ListItem>
+                  </a>
+                </Link>
+
               </List>
             </DrawerContent>
           </Drawer>
@@ -82,10 +86,9 @@ class MyAppHeader extends Component<Props> {
               </TopAppBarIcon>
             </TopAppBarSection>
           </TopAppBarRow>
-
+          <Section />
+          <Tags />
         </TopAppBar>
-        <Section />
-        <Tags />
       </div>
     )
   }
