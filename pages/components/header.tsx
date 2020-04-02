@@ -1,6 +1,4 @@
 import React, {Component} from "react";
-import Section from "./section";
-import Tags from "./tags";
 import TopAppBar, { TopAppBarIcon, TopAppBarRow, TopAppBarSection } from '@material/react-top-app-bar';
 import Drawer, {DrawerContent, DrawerHeader, DrawerTitle} from '@material/react-drawer';
 import List, {ListItem, ListItemGraphic, ListItemText} from '@material/react-list';
@@ -8,7 +6,7 @@ import Link from "next/link";
 import MaterialIcon from "@material/react-material-icon";
 
 interface Props {
-  iconClassName: string
+  iconClassName?: string
 }
 
 class MyAppHeader extends Component<Props> {
@@ -71,7 +69,7 @@ class MyAppHeader extends Component<Props> {
           <TopAppBarRow>
             <TopAppBarSection align='start'>
               <TopAppBarIcon navIcon tabIndex={0}>
-                <MaterialIcon className={this.props.iconClassName} hasRipple icon='home' onClick={() => location.href="/"}/>
+                  <MaterialIcon className="mdc-custom-icon" hasRipple icon='home' onClick={()=> location.href="/" }/>
               </TopAppBarIcon>
             </TopAppBarSection>
             <TopAppBarSection align='end' role='toolbar'>
@@ -79,15 +77,13 @@ class MyAppHeader extends Component<Props> {
                 <MaterialIcon 
                   aria-label="print page" 
                   hasRipple 
-                  className={this.props.iconClassName}
+                  className="mdc-custom-icon"
                   icon='menu' 
                   onClick={() => this.setState({open: ! this.state.open})}
                 />
               </TopAppBarIcon>
             </TopAppBarSection>
           </TopAppBarRow>
-          <Section />
-          <Tags />
         </TopAppBar>
       </div>
     )

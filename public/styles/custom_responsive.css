@@ -2,6 +2,12 @@
     .header-text {
         display: none;
     }
+    .mdc-top-app-bar {
+        min-height: 280px;
+    }
+    .wrapper .tags {
+        bottom: 45px;
+    }
 }
 
 @media screen and (min-width: 1160px) {

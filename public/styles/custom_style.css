@@ -33,15 +33,15 @@ body {
 }
 
 /* Contents - tags */
-.wrapper .wrapper-header .tags {
+.wrapper .tags {
     position: absolute;
     display: flex;
     left: 50%;
-    bottom: 5%;
+    bottom: 55px;
     transform: translate(-50%, 0);
 }
 
-.wrapper .wrapper-header .tags .tag {
+.wrapper .tags .tag {
    margin-right: 10px;
    color: white;
    border: 1px solid whitesmoke;
