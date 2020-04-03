@@ -1,5 +1,12 @@
 import Button from "@material/react-button";
 
+const goLogin = (evt) => {
+    evt.preventDefault();
+
+    /* Call Login APIs */
+    
+}
+
 const MyAppLogin = () => {
     return(
         <div className="wrapper-form">
@@ -7,7 +14,7 @@ const MyAppLogin = () => {
                 <h1 className="form-title">LOGIN</h1>
                 <input type="text" name="username" placeholder="Username" className="username"/>
                 <input type="password" name="password" placeholder="Password" className="password"/>
-                <Button raised outlined id="loginButton">LOGIN</Button>
+                <Button raised outlined id="loginButton" onClick={goLogin}>LOGIN</Button>
             </form>
 
             <style jsx>{`
