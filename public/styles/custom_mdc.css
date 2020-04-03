@@ -40,3 +40,10 @@
 .mdc-list-href {
     text-decoration: none;
 }
+
+/* Login */
+
+#loginButton {
+    background-color: rgb(129, 127, 254);
+    border-color: rgb(129, 127, 254);
+}
