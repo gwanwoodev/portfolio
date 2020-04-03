@@ -1,18 +1,25 @@
+import {useCallback} from "react";
 import Button from "@material/react-button";
 
 const goLogin = (evt) => {
     evt.preventDefault();
 
     /* Call Login APIs */
-
 }
+
+const inputComponent = () => {
+    const autoFocus = useCallback(el => el ? el.focus(): null, []);
+    return autoFocus;
+}
+
+
 
 const MyAppLogin = () => {
     return(
         <div className="wrapper-form">
             <form className="login-form" method="POST" action="/api/login">
                 <h1 className="form-title">LOGIN</h1>
-                <input type="text" name="username" placeholder="Username" className="username"/>
+                <input type="text" name="username" placeholder="Username" className="username" ref={inputComponent()}/>
                 <input type="password" name="password" placeholder="Password" className="password"/>
                 <Button raised outlined id="loginButton" onClick={goLogin}>LOGIN</Button>
             </form>
