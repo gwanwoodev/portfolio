@@ -9,4 +9,6 @@ const contentSchema = new Schema({
     published_date: {type: Date, default: Date.now}
 })
 
-export default mongoose.model("content", contentSchema);
+const model = mongoose.model("content", contentSchema);
+
+export default model;

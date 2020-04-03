@@ -1,4 +1,5 @@
 import * as express from "express";
+import passport from "passport";
 import Content from "../models/content";
 import uploader from "./uploader";
 
@@ -23,13 +24,12 @@ router.post("/content", uploader.single('thumbnail'), (req, res, _next) => {
     });
 });
 
-router.post("/login", uploader.none(), (req, res, _next) => {
-    const {username, password} = req.body;
-    if(username === "test01" && password === "testpw1") {
-        res.send("ok");
-    }else {
-        res.send("no");
-    }
-})
+router.post("/login", passport.authenticate("local", {
+    successRedirect: "/admin",
+    failureRedirect: "/login",
+    failureFlash: true
+}), (req, res, _next) => {
+    res.send(req.user);
+});
 
 export default router;

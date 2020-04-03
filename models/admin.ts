@@ -1,4 +1,5 @@
-import mongoose from "mongoose";
+import mongoose, { PassportLocalSchema } from "mongoose";
+import passportLocalMongoose from "passport-local-mongoose";
 const Schema = mongoose.Schema;
 
 const adminSchema = new Schema({
@@ -6,4 +7,8 @@ const adminSchema = new Schema({
     password: String
 });
 
-export default mongoose.model('admin', adminSchema);
+adminSchema.plugin(passportLocalMongoose);
+
+const model = mongoose.model("Admin", adminSchema as PassportLocalSchema);
+
+export default model;
