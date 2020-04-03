@@ -4,7 +4,7 @@ const goLogin = (evt) => {
     evt.preventDefault();
 
     /* Call Login APIs */
-    
+
 }
 
 const MyAppLogin = () => {
@@ -41,6 +41,7 @@ const MyAppLogin = () => {
                     height: 37px;
                     margin-bottom: 12px;
                     width: 30vh;
+                    font-family: sans-serif;
                     background-color: rgb(230, 230, 230);
                     border: none;
                     padding: 7px 25px;
