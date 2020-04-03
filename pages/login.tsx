@@ -11,12 +11,8 @@ const MyAppLogin = () => {
             </form>
 
             <style jsx>{`
-                html, body {
-                    height: 100%;
-                }
-
                 .wrapper-form {
-                    height: 100%;
+                    height: 100vh;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -26,7 +22,21 @@ const MyAppLogin = () => {
                 .login-form {
                     display: flex;
                     flex-direction: column;
+                }
 
+                .form-title {
+                    font-family: "NanumGothic-ExtraBold";
+                    font-size: 1.3rem;
+                    margin-bottom: 30px;
+                }
+
+                .username, .password {
+                    height: 37px;
+                    margin-bottom: 12px;
+                    width: 30vh;
+                    background-color: rgb(230, 230, 230);
+                    border: none;
+                    padding: 7px 25px;
                 }
             `}</style>
         </div>
