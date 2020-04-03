@@ -1,10 +1,26 @@
 import {useCallback} from "react";
 import Button from "@material/react-button";
 
-const goLogin = (evt) => {
+const handleSubmit = async (evt) => {
     evt.preventDefault();
 
     /* Call Login APIs */
+    const username = evt.target.username.value;
+    const password = evt.target.password.value;
+    const formData = new FormData();
+
+    formData.set("username", username);
+    formData.set("password", password);
+
+    const authenticate = await fetch("/api/login", {
+        method: "POST",
+        body: formData
+    }).then(result => {
+       return result.text();
+    })
+    
+    console.log(authenticate);
+
 }
 
 const inputComponent = () => {
@@ -12,16 +28,14 @@ const inputComponent = () => {
     return autoFocus;
 }
 
-
-
 const MyAppLogin = () => {
     return(
         <div className="wrapper-form">
-            <form className="login-form" method="POST" action="/api/login">
+            <form className="login-form" method="POST" action="/api/login" onSubmit={handleSubmit}>
                 <h1 className="form-title">LOGIN</h1>
                 <input type="text" name="username" placeholder="Username" className="username" ref={inputComponent()}/>
                 <input type="password" name="password" placeholder="Password" className="password"/>
-                <Button raised outlined id="loginButton" onClick={goLogin}>LOGIN</Button>
+                <Button raised outlined id="loginButton">LOGIN</Button>
             </form>
 
             <style jsx>{`

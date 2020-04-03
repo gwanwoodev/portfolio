@@ -21,7 +21,15 @@ router.post("/content", uploader.single('thumbnail'), (req, res, _next) => {
         err ? res.status(500).json({msg: 'error'})
             : res.status(200).json({msg: 'success'})
     });
-
 });
+
+router.post("/login", uploader.none(), (req, res, _next) => {
+    const {username, password} = req.body;
+    if(username === "test01" && password === "testpw1") {
+        res.send("ok");
+    }else {
+        res.send("no");
+    }
+})
 
 export default router;
