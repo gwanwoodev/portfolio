@@ -1,34 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Header from "./components/header";
 import Contents from "./components/contents";
 import fetch from "isomorphic-unfetch";
 
+const Portfolio = props => (
+  <div className="wrapper">
+    <Header />
+    <Contents data={props.data ? props.data : ""} />
+  </div>
+)
 
-class Portfolio extends Component {
-  state = {
-    data: []
-  }
-
-  constructor(props: any) {
-    super(props);
-    this.setContentProps();
-  }
-
-
-  setContentProps = async () => {
-    const result = await fetch("http://localhost:3000/api/content").then(res => res.json());
-    this.setState({data: result});
-  }
-  
-  render() {
-    const {data} = this.state;
-    return(
-      <div className="wrapper">
-        <Header />
-        <Contents data={data} />
-      </div>
-    )
-  }
+Portfolio.getInitialProps = async () => {
+  const res = await fetch("http://localhost:3000/api/content").then(res => res.json());
+  return {data: res};
 }
 
 export default Portfolio

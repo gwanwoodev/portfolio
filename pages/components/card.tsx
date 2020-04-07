@@ -7,7 +7,7 @@ import Card, {
   } from "@material/react-card";
 import Button from "@material/react-button";
 
-const MyAppCard = (props: any) => {
+const MyAppCard = (props) => {
     return (
         <Card>
             <a href={props.directLink} target="_blank">

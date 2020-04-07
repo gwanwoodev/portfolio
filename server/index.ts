@@ -6,7 +6,7 @@ import api from "./api";
 
 const port = parseInt(process.env.PORT || '3000', 10)
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
+const app = next({ dev:false })
 const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
