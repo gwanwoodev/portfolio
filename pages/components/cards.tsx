@@ -12,7 +12,9 @@ class MyAppCards extends Component<Props> {
     }
 
     render() {
-        const cards = this.props.data.map((card) => {
+        const cards = this.props.data ? this.props.data : null;
+        if(!cards) return;
+        const result = cards.map((card) => {
             return(
                 <Cell columns={4} key={card._id}>
                     <Card title={card.title} preview={card.preview} thumbnail={card.thumbnail} directLink={card.directLink}>
@@ -26,7 +28,7 @@ class MyAppCards extends Component<Props> {
             <div className="contents-cards">
                 <Grid>
                     <Row>
-                        {cards}                                                                                                                
+                        {result}                                                                                                                
                     </Row>
                 </Grid>
             </div>

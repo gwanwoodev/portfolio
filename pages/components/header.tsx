@@ -4,6 +4,8 @@ import Drawer, {DrawerContent, DrawerHeader, DrawerTitle} from '@material/react-
 import List, {ListItem, ListItemGraphic, ListItemText} from '@material/react-list';
 import Link from "next/link";
 import MaterialIcon from "@material/react-material-icon";
+import Section from "../components/section";
+import Tags from "../components/tags";
 
 interface Props {
   iconClassName?: string
@@ -85,6 +87,8 @@ class MyAppHeader extends Component<Props> {
             </TopAppBarSection>
           </TopAppBarRow>
         </TopAppBar>
+        <Section />
+        <Tags />
       </div>
     )
   }
