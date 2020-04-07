@@ -9,8 +9,9 @@ const router = express.Router();
 router.get("/content", uploader.none(), (_req, res, _next) => {
     Content.find((err, contents) => {
         err ? res.status(500).json({msg: 'error'})
-            : res.status(200).json(contents)
+            : res.status(200).json(contents.reverse())
     });
+
 });
 
 router.post("/content", uploader.single('thumbnail'), (req, res, _next) => {
