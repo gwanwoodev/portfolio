@@ -7,7 +7,8 @@ import Section from "../components/section";
 import Tags from "../components/tags";
 
 interface Props {
-  iconClassName?: string
+  iconClassName?: string,
+  loggedIn: boolean
 }
 
 class MyAppHeader extends Component<Props> {
@@ -18,6 +19,7 @@ class MyAppHeader extends Component<Props> {
   constructor(props: Props) {
     super(props);
   }
+
 
   render() {
     return(
@@ -53,12 +55,15 @@ class MyAppHeader extends Component<Props> {
                     <ListItemText primaryText="Contact" />
                   </ListItem>                                
                 </a>
-                <a href="/login" className="mdc-list-href">
-                  <ListItem>
-                    <ListItemGraphic graphic={<MaterialIcon icon="lock" />} />
-                    <ListItemText primaryText="Login" />
-                  </ListItem>
-                </a>
+                { this.props.loggedIn === false ?
+                  <a href="/login" className="mdc-list-href">
+                    <ListItem>
+                      <ListItemGraphic graphic={<MaterialIcon icon="lock" />} />
+                      <ListItemText primaryText="Login" />
+                    </ListItem>
+                  </a>
+                  : null }
+
 
               </List>
             </DrawerContent>

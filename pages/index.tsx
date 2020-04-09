@@ -5,14 +5,14 @@ import fetch from "isomorphic-unfetch";
 
 const Portfolio = props => (
   <div className="wrapper">
-    <Header />
+    <Header loggedIn={props.loggedIn}/>
     <Contents data={props.data ? props.data : ""} />
   </div>
 )
 
-Portfolio.getInitialProps = async () => {
+Portfolio.getInitialProps = async ({req}) => {
   const res = await fetch("http://localhost:3000/api/content").then(res => res.json());
-  return {data: res};
+  return {data: res, loggedIn: req.isAuthenticated()};
 }
 
 export default Portfolio
