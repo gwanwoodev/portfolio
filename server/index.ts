@@ -30,13 +30,14 @@ app.prepare().then(() => {
 
   server.use('/api', api);
 
+  server.get("/login", (req, res, next) => {
+    if(req.user) res.redirect("/");
+    else next();
+  });
+
   server.get("/admin", (req, res, next) => {
-    console.log(req.session?.passport);
-    if(req.user) {
-      next();
-    }else {
-      res.redirect("/login");
-    }
+    if(req.user) next();
+    else res.redirect("/login");
   });
 
   server.all("*", (req, res) => {

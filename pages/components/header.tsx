@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import TopAppBar, { TopAppBarIcon, TopAppBarRow, TopAppBarSection } from '@material/react-top-app-bar';
 import Drawer, {DrawerContent, DrawerHeader, DrawerTitle} from '@material/react-drawer';
 import List, {ListItem, ListItemGraphic, ListItemText} from '@material/react-list';
-import Link from "next/link";
 import MaterialIcon from "@material/react-material-icon";
 import Section from "../components/section";
 import Tags from "../components/tags";
@@ -54,14 +53,12 @@ class MyAppHeader extends Component<Props> {
                     <ListItemText primaryText="Contact" />
                   </ListItem>                                
                 </a>
-                <Link href="/login">
-                  <a className="mdc-list-href">
-                    <ListItem>
-                      <ListItemGraphic graphic={<MaterialIcon icon="lock" />} />
-                      <ListItemText primaryText="Login" />
-                    </ListItem>
-                  </a>
-                </Link>
+                <a href="/login" className="mdc-list-href">
+                  <ListItem>
+                    <ListItemGraphic graphic={<MaterialIcon icon="lock" />} />
+                    <ListItemText primaryText="Login" />
+                  </ListItem>
+                </a>
 
               </List>
             </DrawerContent>
