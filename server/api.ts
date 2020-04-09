@@ -1,5 +1,6 @@
 import * as express from "express";
 import Content from "../models/content";
+import passport from "passport";
 import uploader from "./uploader";
 
 const router = express.Router();
@@ -24,5 +25,7 @@ router.post("/content", uploader.single('thumbnail'), (req, res, _next) => {
     });
 
 });
+
+router.post("/login", passport.authenticate("local", {successRedirect: "/admin", failureRedirect: "/login", failureFlash: true, session: true}));
 
 export default router;

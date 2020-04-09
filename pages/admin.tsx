@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class PortfolioAdmin extends Component {
-    constructor(props: any) {
+    constructor(props) {
         super(props);
     }
 
