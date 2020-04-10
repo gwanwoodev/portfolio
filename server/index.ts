@@ -7,6 +7,7 @@ import session from "express-session";
 import flash from "connect-flash";
 import User from "../models/user";
 import api from "./api";
+import helmet from "helmet";
 
 const port = parseInt(process.env.PORT || '3000', 10)
 const dev = process.env.NODE_ENV !== 'production'
@@ -29,6 +30,7 @@ app.prepare().then(() => {
   passport.deserializeUser(User.deserializeUser());
 
   server.use('/api', api);
+  server.use(helmet());
 
   server.get("/login", (req, res, next) => {
     if(req.user) res.redirect("/");
