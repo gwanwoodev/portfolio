@@ -1,5 +1,5 @@
 /* Header */
-.mdc-top-app-bar {
+.mdc-main-top-bar {
     /* padding-bottom: 40%; */
     min-height: 320px;
     background-image: url("https://gwanwoodev.github.io/assets/img/posts/march-logo.jpg");
@@ -8,7 +8,7 @@
     background-color: transparent;
 }
 
-.mdc-top-app-bar .mdc-custom-icon {
+.mdc-main-top-bar .mdc-custom-icon {
     color: white;
 }
 
@@ -47,4 +47,14 @@
     background-color: rgb(129, 127, 254);
     border-color: rgb(129, 127, 254);
     height: 45px;
+}
+
+/* Admin */
+
+.wrapper-admin-header {
+    padding-bottom: 64px;
+}
+
+.mdc-admin-top-bar {
+    background-color: dodgerblue;
 }

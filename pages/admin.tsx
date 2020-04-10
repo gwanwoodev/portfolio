@@ -1,5 +1,8 @@
+import AdminHeader from "./components/admin/header";
+
 const Admin = () => (
-    <div>
+    <div className="wrapper">
+        <AdminHeader />
         <h1>컨텐츠 등록</h1>
         <form action="/api/content" method="POST" encType="multipart/form-data">
             <input type="text" name="title" />

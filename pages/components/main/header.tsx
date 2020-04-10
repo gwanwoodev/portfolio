@@ -39,7 +39,7 @@ class MyAppHeader extends Component<Props> {
   render() {
     return(
       <div className="wrapper-header">
-        <TopAppBar>
+        <TopAppBar className="mdc-main-top-bar">
           <Drawer
             modal
             open={this.state.open}

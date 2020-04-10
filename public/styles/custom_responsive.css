@@ -2,7 +2,7 @@
     .header-text {
         display: none;
     }
-    .mdc-top-app-bar {
+    .mdc-main-top-bar {
         min-height: 280px;
     }
     .wrapper .tags {
