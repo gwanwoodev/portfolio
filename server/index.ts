@@ -35,6 +35,15 @@ app.prepare().then(() => {
     else next();
   });
 
+  server.get("/logout", (req, res, _next) => {
+    if(req.user) {
+      req.logout();
+      res.redirect("/");
+    } else {
+      res.redirect("/");
+    }
+  });
+
   server.get("/admin", (req, res, next) => {
     if(req.user) next();
     else res.redirect("/login");

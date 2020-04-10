@@ -11,6 +11,21 @@ interface Props {
   loggedIn: boolean
 }
 
+const isLoggedMenu = (isLogged: boolean) => {
+  const href = isLogged ? "/logout" : "/login";
+  const hrefText = isLogged ? "Logout" : "Login"
+
+  const comp = <a href={href} className="mdc-list-href">
+    <ListItem>
+      <ListItemGraphic graphic={<MaterialIcon icon="lock" />} />
+      <ListItemText primaryText={hrefText} />      
+    </ListItem>
+  </a>
+
+  return comp;
+
+}
+
 class MyAppHeader extends Component<Props> {
   state = {
     selectedIndex: 0,
@@ -55,14 +70,14 @@ class MyAppHeader extends Component<Props> {
                     <ListItemText primaryText="Contact" />
                   </ListItem>                                
                 </a>
-                { this.props.loggedIn === false ?
-                  <a href="/login" className="mdc-list-href">
+                { this.props.loggedIn ? 
+                  <a href="/admin" className="mdc-list-href">
                     <ListItem>
-                      <ListItemGraphic graphic={<MaterialIcon icon="lock" />} />
-                      <ListItemText primaryText="Login" />
+                      <ListItemGraphic graphic={<MaterialIcon icon="dashboard" />} />
+                      <ListItemText primaryText="Dashboard" />      
                     </ListItem>
-                  </a>
-                  : null }
+                  </a> : null}
+                { isLoggedMenu(this.props.loggedIn) }
 
 
               </List>
