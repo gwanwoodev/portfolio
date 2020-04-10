@@ -3,8 +3,8 @@ import TopAppBar, { TopAppBarIcon, TopAppBarRow, TopAppBarSection } from '@mater
 import Drawer, {DrawerContent, DrawerHeader, DrawerTitle} from '@material/react-drawer';
 import List, {ListItem, ListItemGraphic, ListItemText} from '@material/react-list';
 import MaterialIcon from "@material/react-material-icon";
-import Section from "../components/section";
-import Tags from "../components/tags";
+import Section from "./section";
+import Tags from "./tags";
 
 interface Props {
   iconClassName?: string,
