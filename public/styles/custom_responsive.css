@@ -1,7 +1,4 @@
 @media screen and (max-width: 670px) {
-    .header-text {
-        display: none;
-    }
     .mdc-main-top-bar {
         min-height: 280px;
     }
