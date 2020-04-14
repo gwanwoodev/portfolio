@@ -1,18 +1,16 @@
 import React from 'react'
 import Header from "./components/main/header";
 import Contents from "./components/main/contents";
-import fetch from "isomorphic-unfetch";
 
-const Portfolio = props => (
+const portfolios = [
+  {_id: 1, title: 'My Blog', preview: 'Github Pages with Jeykll', thumbnail: '/images/github_jekyll.jpg', directLink: 'https://gwanwoodev.github.io'}
+];
+
+const Portfolio = () => (
   <div className="wrapper">
-    <Header loggedIn={props.loggedIn}/>
-    <Contents data={props.data ? props.data : ""} />
+    <Header />
+    <Contents data={portfolios} />
   </div>
 )
-
-Portfolio.getInitialProps = async ({req}) => {
-  const res = await fetch("http://localhost:3000/api/content").then(res => res.json());
-  return {data: res, loggedIn: req.isAuthenticated()};
-}
 
 export default Portfolio

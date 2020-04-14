@@ -8,23 +8,8 @@ import Tags from "./tags";
 
 interface Props {
   iconClassName?: string,
-  loggedIn: boolean
 }
 
-const isLoggedMenu = (isLogged: boolean) => {
-  const href = isLogged ? "/logout" : "/login";
-  const hrefText = isLogged ? "Logout" : "Login"
-
-  const comp = <a href={href} className="mdc-list-href">
-    <ListItem>
-      <ListItemGraphic graphic={<MaterialIcon icon="lock" />} />
-      <ListItemText primaryText={hrefText} />      
-    </ListItem>
-  </a>
-
-  return comp;
-
-}
 
 class MyAppHeader extends Component<Props> {
   state = {
@@ -70,16 +55,6 @@ class MyAppHeader extends Component<Props> {
                     <ListItemText primaryText="Contact" />
                   </ListItem>                                
                 </a>
-                { this.props.loggedIn ? 
-                  <a href="/admin" className="mdc-list-href">
-                    <ListItem>
-                      <ListItemGraphic graphic={<MaterialIcon icon="dashboard" />} />
-                      <ListItemText primaryText="Dashboard" />      
-                    </ListItem>
-                  </a> : null}
-                { isLoggedMenu(this.props.loggedIn) }
-
-
               </List>
             </DrawerContent>
           </Drawer>
