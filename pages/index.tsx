@@ -11,7 +11,7 @@ const Portfolio = () => (
   <div className="wrapper">
     <Head>
       <title>Portfolios</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport"/>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" key="viewport"/>
     </Head>
 
     <Header />
