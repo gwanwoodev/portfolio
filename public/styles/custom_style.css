@@ -6,7 +6,6 @@ body {
 /* wrapper */
 .wrapper {
     position: relative;
-    min-width: 480px;
 }
 
 /* header-section */

@@ -1,10 +1,11 @@
 /* Header */
 .mdc-main-top-bar {
     /* padding-bottom: 50%; */
-    min-height: 320px;
+    min-height: 280px;
     background-image: url("https://gwanwoodev.github.io/assets/img/posts/march-logo.jpg");
     background-size: cover;
     position: static;
+    background-position: center center;
     background-color: transparent;
 }
 

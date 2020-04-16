@@ -4,9 +4,19 @@
     }
 }
 
+@media screen and (max-width: 456px) {
+    .wrapper .tags {
+        display: none;
+    }
+}
+
 @media screen and (min-width: 1160px) {
     .mdc-layout-grid__cell {
         grid-column-end: span 3;
+    }
+
+    .mdc-main-top-bar {
+        min-height: 420px;
     }
 }
 
@@ -16,6 +26,11 @@
         margin: 0 auto;
         padding: 16px;
         padding: var(--mdc-layout-grid-margin-phone, 16px)
+    }
+
+    .mdc-layout-grid__cell-span--4, .mdc-layout-grid__cell--span-4-phone {
+        width: auto;
+        grid-column-end: span 4;
     }
 
     .mdc-layout-grid__inner {
