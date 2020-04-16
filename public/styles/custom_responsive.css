@@ -1,7 +1,4 @@
 @media screen and (max-width: 670px) {
-    .mdc-main-top-bar {
-        min-height: 280px;
-    }
     .wrapper .tags {
         bottom: 5%;
     }
@@ -19,11 +16,6 @@
         margin: 0 auto;
         padding: 16px;
         padding: var(--mdc-layout-grid-margin-phone, 16px)
-    }
-
-    .mdc-layout-grid__cell-span--4, .mdc-layout-grid__cell--span-4-phone {
-        width: auto;
-        grid-column-end: span 4;
     }
 
     .mdc-layout-grid__inner {
